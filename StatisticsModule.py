@@ -8,7 +8,7 @@ def populationMean(dataSet):
         mean = sum(dataSet) / len(dataSet)
         return mean
 
-# print("Population mean is: ", str(populationMean(dataSet)))
+# print("Population mean: ", str(populationMean(dataSet)))
 
 #2 Median
 def median(dataSet):
@@ -49,15 +49,15 @@ def variance(dataSet):
 
 # print('Population Variance: ', str(variance(dataSet)))
 
-#5 Variance of the population proportion
+#5 Variance of population proportion
 def variancePopulationProportion(dataSet):
     mean = sum(dataSet) / len(dataSet)
     populationProportion = 1 / len(dataSet)
-    variance = sum((xi - mean) ** 2 for xi in dataSet) / (len(dataSet) - 1)
+    variance = sum((xi - mean) ** 2 for xi in dataSet) / (1 / len(dataSet))
 
     return variance
 
-# print('Population Proportion Variance: ', str(variancePopulationProportion(dataSet)))
+# print('Variance of Population Proportion: ', str(variancePopulationProportion(dataSet)))
 
 #6 Z-Score
 def zScore(dataSet):
@@ -74,7 +74,7 @@ def zScore(dataSet):
 
 #8 Population Correlation Coefficient 
 
-#9 Confidence Intervalu
+#9 Confidence Interval
 def confidenceInterval(dataSet):
     from scipy.stats import sem, t
     n = len(dataSet)
@@ -88,7 +88,7 @@ def confidenceInterval(dataSet):
 
     return start, end
 
-# print ("Confidence Interval is:", confidenceInterval(dataSet))
+# print ("Confidence Interval:", confidenceInterval(dataSet))
 
 #10 Population Variance
 
@@ -101,6 +101,8 @@ def sampleMean(dataSet):
     smean = sum(dataSet) / len(dataSet)
 
     return smean
+# print ("Sample Mean:", sampleMean(dataSet))
+
 #14 Sample Standard Deviation
 def standardDeviation(dataSet):
     mean = sum(dataSet) / len(dataSet)
