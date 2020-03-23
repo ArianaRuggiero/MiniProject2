@@ -11,7 +11,7 @@ def confidenceInterval(dataSet):
     std = math.sqrt(sum([(val - m)**2 for val in dataSet])/(len(dataSet) - 1))
     std_err = std / math.sqrt(n)
     t = m / std_err
-    h = std_err * t((1 + confidence) / 2, n - 1)
+    h = std_err * t * ((1 + confidence) / 2, n - 1)
 
     start = m + h
     end = m - h
